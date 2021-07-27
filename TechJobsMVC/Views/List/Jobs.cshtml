@@ -5,6 +5,49 @@
     @{
         //TODO #1: Use a loop to display job results in a table.
     }
+    @*<style>
+            tr:nth-child(even) {
+                background-color:gray;
+            }
+        </style>*@
+    
+    @foreach (Job job in ViewBag.jobs)
+    {
+        <table class="job-listing">
+            <tbody>
+                <tr>
+                    <td>ID: </td>
+                    <td>@job.Id</td>
+                </tr>
+                <tr>
+                    <td>Name: </td>
+                    <td>@job.Name</td>
+                </tr>
+                <tr>
+                    <td>Employer: </td>
+                    <td>@job.Employer</td>
+                </tr>
+                <tr>
+                    <td>Location: </td>
+                    <td>@job.Location</td>
+                </tr>
+                <tr>
+                    <td>Position Type: </td>
+                    <td>@job.PositionType</td>
+                </tr>
+                <tr>
+                    <td>Skill: </td>
+                    <td>@job.CoreCompetency</td>
+                </tr>                
+            </tbody>
+        </table>
+
+
+    }
+
+
+
+
 
 
 </div>
